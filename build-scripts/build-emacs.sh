@@ -12,6 +12,7 @@ set -e
 cd $source_dir
 ./autogen.sh
 ./configure --with-mac --enable-locallisppath=/usr/local/share/emacs/site-lisp:/opt/homebrew/share/emacs/site-lisp --enable-mac-app=$installprefix --prefix=$installprefix --enable-mac-self-contained --with-modules
+make bootstrap
 make
 make install
 set +e
